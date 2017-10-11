@@ -1,0 +1,54 @@
+package testearray;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+/**
+ *
+ * @author renato
+ */
+public class TesteArray {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        int ind;
+        Scanner s = new Scanner(System.in);
+
+        int[] vetor = new int[5];
+        System.out.println("VALORES DO VETOR");
+        System.out.println(" ");
+
+        //preenchimento do vetor
+        for (int i = 0; i < vetor.length; i++) {
+            System.out.println("DIGITE UM NUMERO NA POSIÇÃO " + i);
+            vetor[i] = s.nextInt();
+        }
+//imprime os valores do vetor    
+        for (int c = 0; c < vetor.length; c++) {
+            System.out.println("O VALOR NA POSIÇÃO " + "[" + c + "]" + " É: " + vetor[c] + " ");
+
+        }
+//imprime o vetor na ordem inversa
+        System.out.println(" ");
+        System.out.println("-------------------------------------");
+        System.out.println(" ");
+        System.out.println("VETOR INVERTIDO");
+        System.out.println(" ");
+        for (int e = vetor.length - 1; e >= 0; e--) {
+            System.out.println("O VALOR INVERTIDO NA POSIÇÃO " + "[" + e + "] " + " É: " + vetor[e]);
+        }
+        // metodo que imprime uma posição especifica do vetor
+        System.out.println("");
+        System.out.println("-------------------------------------------");
+        System.out.println("");
+        System.out.println("ESCOLHA UMA POSIÇÃO DO VETOR");
+        ind = s.nextInt();
+        System.out.println("O VALOR DESSA POSIÇÃO É:");
+        System.out.println(vetor[ind]);
+
+    }
+
+}
+
